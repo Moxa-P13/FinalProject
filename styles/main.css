@@ -1,9 +1,13 @@
-/* the styles for the elements */
+
+/* DEVELOPER: Moxa Patel, IS117-005 Fall 2019 */
 * {
 	margin: 0;
 	padding: 0;
 }
 html {
+}
+h1{
+	z-index: 99999;
 }
 header{
 	background-color: rgba(25, 70, 207, 0.83);
@@ -30,20 +34,30 @@ a:focus, a:hover {
 .header{
 	background: rgba(25, 70, 207, 0.83);
 	text-align: center;
+	z-index: 9999;
 }
 .header h1{
 	margin:0;
+}
+.bg{
+	margin:100px
+}
+#nav_menu{
+	z-index: 99999;
 }
 #nav_menu ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	position: relative;
+	z-index: 99999;
+
 }
 #nav_menu ul li {
 	float: left;
 	width: 20%;
 	border-right: 1px solid white;
+	z-index: 99999;
 }
 #nav_menu ul li a {
     display: block;
@@ -53,26 +67,32 @@ a:focus, a:hover {
     background-color: rgba(25, 70, 207, 0.83);
     color: white;
     font-weight: bold;
+	z-index: 99999;
 }
 #nav_menu ul li a:hover {
 	background-color: rgba(12, 28, 89, 0.83);
+	z-index: 99999;
 }
 #nav_menu a.current {
 	color: white;
 	background-color: rgba(0, 0, 0, 0.98);
+	z-index: 99999;
 }
 #nav_menu ul ul {
 	width: 100%;
     display: none;
     position: absolute;
     top: 100%;
+	z-index: 99999;
 }
 #nav_menu ul ul li {
 	float: none;
 	border: 1px solid white;
+	z-index: 99999;
 }
 #nav_menu ul li:hover > ul {
 	display: block;
+	z-index: 99999;
 
 }
 body, html {
@@ -82,7 +102,6 @@ body, html {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
 }
 canvas {
 	position:absolute;
@@ -116,24 +135,27 @@ main {
 	border-top:1px solid white;
 	color: white;
 	background-color: rgba(25, 70, 207, 0.83);
+	z-index: 9999;
 }
 #mobile_menu {
 	display: none;
 }
 .aboutme{
+	z-index: 9998;
 	margin-top:10vh;
 	margin-left:21vw;
 	margin-right:20vw;
 	margin-bottom: 10vw;
 	border: 5px solid cornflowerblue;
+
 }
 
 .card{
 	float:left;
-	margin-left:10%;
+	margin-left:5%;
 	margin-top:10vh;
 	margin-bottom: 10vh;
-	z-index: 99999;
+	z-index: 99998;
 }
 canvas {
 	position: absolute;
@@ -185,6 +207,7 @@ canvas {
 	left: 50%;
 	margin-left: -200px;
 	transform: translateZ(0); /* offers a bit of a performance boost by pushing some of this processing to the GPU in Safari*/
+
 }
 
 @keyframes walk-cycle {
@@ -193,17 +216,17 @@ canvas {
 }
 
 .foreground, .midground, .background {
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 65vh;
 	position: absolute;
-	top: 0; left: 0;
-translate3d(0,0,0);
+	top: 35vh;
+	left: 0;
+	translate3d(0,0,0);
 }
 
 .foreground {
 	animation: parallax_fg linear 10s infinite both;
 	background:  url(http://stash.rachelnabors.com/24ways2012/foreground_grass.png) 0 100% repeat-x;
-	z-index: 3;
 }
 
 @keyframes parallax_fg {
@@ -231,7 +254,6 @@ translate3d(0,0,0);
 			url(http://stash.rachelnabors.com/24ways2012/background_mountain1.png);
 	background-repeat: repeat-x;
 	background-position: 0 100%;
-	z-index: 1;
 	animation: parallax_bg linear 40s infinite;
 }
 
